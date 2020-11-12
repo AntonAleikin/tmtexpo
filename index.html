@@ -4,10 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMT Expo</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
-<body>
+<body class="body">
+
+    <!-- Header -->
+    <header class="header"> 
+
+        <div class="container">
+
+            <nav class="nav">
+
+                <a class="nav__logo-link" href="">
+                    <div class="nav__logo-round">
+                        <img class="nav__logo" src="img/icons/logo.png" alt="Turkish medical travel expo 2021 logo">
+                    </div>
+                </a>
+                
+
+                <!--  Мобильное меню -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                
+                <ul class="menu">
+                    <li><a class="menu__link" href="#home">Home</a></li>
+                    <li><a class="menu__link" href="#about">About project</a></li>
+                    <li><a class="menu__link" href="#benefits">Benefits</a></li>
+                    <li><a class="menu__link menu__link_red" href="#">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home section -->
+    <section class="home-section">
+
+        <div class="container">
+
+            <h1 class="home-section__header">TURKISH MEDICAL TRAVEL 2021</h1>
+
+            <div class="home-section__promo">
+                <h2 class="home-section__promo-text">
+                    Online forum for patients and partners from Ukraine and the CIS: <br> 
+                    opportunities for treatment in Turkey in the new reality
+                </h2>
+
+                <div class="home-section__promo-dates">14-16 January 2021</div>
+            </div>
+
+            <div class="home-section__sponsors">
+                <div class="home-section__sponsors-text">Under the patronage of:</div>
+
+                <div class="home-section__sponsors-wrapper">
+
+                    <div class="home-section__sponsors-logos">
+
+                        <img class="home-section__sponsors-logo" src="img/icons/turkey-discover-the-potential-logo.png" alt="turkey-discover-the-potential-logo">
     
-    <form action="#" class="form">
+                        <img class="home-section__sponsors-logo" src="img/icons/thtc-logo.png" alt="thtc-logo">
+    
+                        <img class="home-section__sponsors-logo" src="img/icons/minisry-of-trade-logo.png" alt="minisry-of-trade-logo">
+                    </div>
+
+                    <div class="home-section__sponsors-link">
+                        <!-- More button -->
+                        <a class="home-section__link" href="#about">
+                            <div class="home-section__link-text">More details</div>
+                            <i class="fas fa-chevron-down pointer"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- <form action="#" class="form">
         <input required placeholder="Company name" name="companyName" type="text" maxlength="30" class="form__input">
 
         <input required placeholder="Contact person" name="contactPerson" type="text" maxlength="30" class="form__input">
@@ -17,7 +97,7 @@
         <input required placeholder="Phone" name="Phone" type="text" maxlength="20" class="form__input">
 
         <button class="form__button">Submit</button>
-    </form>
+    </form> -->
 
 
     <script src="js/bundle/bundle.js"></script>

@@ -1,0 +1,54 @@
+.home-section
+    padding-top: 22vh 
+    height: 100vh
+    width: 100%
+    position: relative
+    background: url(../../img/home-bg.jpg) center (center / cover) no-repeat
+    
+    &__header
+        font-family: Montserrat, sans-serif
+        font-weight: 900
+        font-size: 7.5vh
+        color: $main
+
+    &__promo
+        display: inline-block
+        margin-top: 3vh
+        padding: 16px 25px 0 25px
+        height: 25vh
+        border-radius: 3vh
+        background-color: rgba(225, 225, 225, 0.6)
+
+        &-text
+            font-size: 4vh
+            font-weight: 700
+        &-dates
+            margin-top: 2vh
+            font-size: 4.5vh
+            font-weight: 700
+            color: $main
+
+    &__sponsors
+        margin-top: 13vh
+
+        &-text
+            font-size: 3.3vh
+            font-weight: 500
+        
+        &-wrapper
+            +flex-between-center
+
+        &-logos
+            width: 60%
+            +flex-between-center
+        
+        &-logo
+            height: 14vh
+
+    &__link
+        +link-to-other-section
+        color: $black_color
+        &-text
+            font-family: Montserrat, sans-serif
+        &:hover
+            color: $black_color

@@ -1,0 +1,70 @@
+.header
+    height: 8.6vh
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: 5
+    background: $main_bg
+    transition: all 1s
+    
+    &_fixed
+        position: fixed
+        top: 0
+        z-index: 5
+        background: $main_bg
+        box-shadow: 0 1px 6px 0px black
+
+        transform: translateY(-4px)
+        transition: all 1s
+
+
+.nav
+    height: 8.6vh
+    +flex-between-center
+
+    &__logo
+        height: 7.3vh
+        
+        &-round
+            +flex-center
+            height: 7.3vh
+            border-radius: 100%
+            background-color: $white_color
+
+        &-link
+            &:hover
+                text-decoration: none
+
+
+.menu
+    margin: 0
+    padding: 0
+    height: 4.5vh
+    width: 39% //проценты не от всей ширины экрана, а от ширины сетки
+
+    +flex-between-center
+
+    list-style-type: none 
+
+    &__link
+        font-family: Montserrat, sans-serif
+        color: $white_color
+        font-size: 2.15vh
+        line-height: 4.5vh
+        &:hover
+            color: $white_color
+            text-decoration: none
+            text-shadow: 0px 0px 8px white
+        &_red
+            color: $main
+            text-shadow: 0px 4px 8px white
+            &:hover
+                color: white
+                text-decoration: none
+                text-shadow: 0px 4px 8px $main
+        
+        
+
+
+.hamburger
+    display: none

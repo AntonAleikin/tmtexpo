@@ -1,0 +1,27 @@
+=flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+    
+=flex-between-center
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+// Кнопка со стрелкой на следующую секцию
+=link-to-other-section
+    font-size: 3vh
+        
+    display: inline-block
+    text-decoration: none
+
+    &-text
+        display: inline-block
+    .pointer
+        transform: translateY(0.3vh) //Выравниваем стрелочку (опускаем вниз) 
+    
+    &:hover
+        transition: all 0.2s ease-out
+        text-decoration: none
+        transform: translateY(-2px)
+        text-shadow: 0px 2px 2px grey
