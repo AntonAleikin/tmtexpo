@@ -1,0 +1,23 @@
+{
+  "name": "tmtexpo",
+  "version": "1.0.0",
+  "description": "Digital  Turkish medical travel exhibition 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Digital",
+    "Turkish",
+    "medical",
+    "travel",
+    "exhibition",
+    "2021"
+  ],
+  "author": "Anton Aleikin",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
