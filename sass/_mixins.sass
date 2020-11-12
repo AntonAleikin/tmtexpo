@@ -8,20 +8,39 @@
     justify-content: space-between
     align-items: center
 
+
+// Главные стили каждой секции
+=section
+    padding-top: 13vh 
+    height: 100vh
+    width: 100%
+    position: relative
+
+
+// Главные стили заголовка каждой секции
+=section-header
+    font-family: Montserrat, sans-serif
+    font-size: 4.4vh
+    font-weight: 700
+    color: $main
+    text-align: center
+    
+
 // Кнопка со стрелкой на следующую секцию
 =link-to-other-section
-    font-size: 3vh
-        
-    display: inline-block
-    text-decoration: none
+    &__link
+        font-size: 3vh
+            
+        display: inline-block
+        text-decoration: none
 
-    &-text
+        &:hover
+            transition: all 0.2s ease-out
+            text-decoration: none
+            transform: translateY(-2px)
+            text-shadow: 0px 2px 2px grey
+
+    &__text
         display: inline-block
     .pointer
         transform: translateY(0.3vh) //Выравниваем стрелочку (опускаем вниз) 
-    
-    &:hover
-        transition: all 0.2s ease-out
-        text-decoration: none
-        transform: translateY(-2px)
-        text-shadow: 0px 2px 2px grey

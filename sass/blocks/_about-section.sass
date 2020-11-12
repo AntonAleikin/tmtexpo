@@ -1,0 +1,58 @@
+.about-section
+    +section
+    background-color: $white_color
+
+    &__header
+        +section-header
+    
+    &__text
+        margin-top: 4.3vh
+        margin-left: 15px 
+        font-size: 3vh
+        font-weight: 500
+        text-align: left
+        span
+            font-size: 4vh
+            font-weight: 700
+    
+    &__descr
+        margin-top: 7.6vh
+
+        &-item
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+
+            padding: 2.5vh
+            min-height: 36vh
+            border-radius: 3vh
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.4)
+            &_red
+                color: white
+                background-color: #FF8377
+            &_yellow
+                background-color: #FFE09B
+            &_blue
+                background-color: #93E0EE
+
+        &-text
+            line-height: 4vh
+
+        &-list
+            margin: 0
+            padding: 0
+
+        &-icon
+            font-size: 5vh
+
+.section-link
+    margin-top: 4.4vh
+    transform: translateX(25%)
+    +link-to-other-section
+    &__link
+        color: $black_color
+        &:hover
+            color: $black_color
+    &__text
+        font-family: Montserrat, sans-serif
