@@ -1,4 +1,7 @@
 // Импортируем модули и вызываем
+import smoothScroll from './modules/smooth-scroll';
+smoothScroll();
+
 import headerFixed from './modules/header_fixed';
 headerFixed();
 

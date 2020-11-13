@@ -12,22 +12,26 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_header_fixed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header_fixed */ "./js/modules/header_fixed.js");
-/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
-/* harmony import */ var _modules_hover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hover */ "./js/modules/hover.js");
-/* harmony import */ var _modules_send_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/send-form */ "./js/modules/send-form.js");
+/* harmony import */ var _modules_smooth_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/smooth-scroll */ "./js/modules/smooth-scroll.js");
+/* harmony import */ var _modules_header_fixed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/header_fixed */ "./js/modules/header_fixed.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
+/* harmony import */ var _modules_hover__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/hover */ "./js/modules/hover.js");
+/* harmony import */ var _modules_send_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/send-form */ "./js/modules/send-form.js");
 // Импортируем модули и вызываем
 ;
-(0,_modules_header_fixed__WEBPACK_IMPORTED_MODULE_0__.default)();
+(0,_modules_smooth_scroll__WEBPACK_IMPORTED_MODULE_0__.default)();
 
 
-(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__.default)();
+(0,_modules_header_fixed__WEBPACK_IMPORTED_MODULE_1__.default)();
 
 
-(0,_modules_hover__WEBPACK_IMPORTED_MODULE_2__.default)();
+(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_2__.default)();
 
 
-(0,_modules_send_form__WEBPACK_IMPORTED_MODULE_3__.default)();
+(0,_modules_hover__WEBPACK_IMPORTED_MODULE_3__.default)();
+
+
+(0,_modules_send_form__WEBPACK_IMPORTED_MODULE_4__.default)();
 
 /***/ }),
 
@@ -248,6 +252,60 @@ function sendForm() {
             }
         });
     });
+}
+
+/***/ }),
+
+/***/ "./js/modules/smooth-scroll.js":
+/*!*************************************!*\
+  !*** ./js/modules/smooth-scroll.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ smoothScroll
+/* harmony export */ });
+function smoothScroll () {
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+
+        const anchors = document.querySelectorAll('a[href*="#"]');
+
+        anchors.forEach((anchor) => {
+            
+            anchor.addEventListener("click", (e) => {
+                e.preventDefault();
+                        
+                const blockID = anchor.getAttribute('href').substr(1);
+                
+                document.getElementById(blockID).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    }
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+
+        const anchor = document.querySelector('.section-link_mobile__link');
+        
+        anchor.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute('href').substr(1);
+                
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    }
 }
 
 /***/ }),
