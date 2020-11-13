@@ -1,0 +1,40 @@
+@media (max-width: 991px)
+    .benefits-section
+
+        &__wrapper
+            height: 55vh
+
+        .section-link
+            display: none
+
+@media (max-width: 767px)
+    .benefits-section
+        height: auto
+
+        &__header
+            margin-bottom: 4vh
+
+        &__wrapper
+            margin-bottom: 5vh
+            height: 60vh
+
+        .section-link
+            display: none
+  
+
+// Tall Mobile
+@media (max-width: 575px) and (min-height: 800px)
+    .benefits-section
+        &__wrapper
+            height: 72vh
+
+            &-header
+                span
+                    font-size: 2.5vh
+
+
+// Short Mobile
+@media (max-width: 575px) and (max-height: 600px)
+    .benefits-section
+        &__wrapper
+            height: 65vh
