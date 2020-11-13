@@ -75,12 +75,18 @@
 
                     <div class="section-link">
                         <!-- More button -->
-                        <a class="section-link__link" href="#about">
+                        <a class="section-link__link section-link__link-hover" href="#about">
                             <div class="section-link__text">More details</div>
                             <i class="fas fa-chevron-down pointer"></i>
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="section-link_mobile">
+                <a href="#about" class="section-link_mobile__link">
+                    <i class="fas fa-chevron-down pointer"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -153,7 +159,7 @@
 
                     <div class="section-link">
                         <!-- More button -->
-                        <a class="section-link__link" href="#benefits">
+                        <a class="section-link__link section-link__link-hover" href="#benefits">
                             <div class="section-link__text">About benefits</div>
                             <i class="fas fa-chevron-down pointer"></i>
                         </a>
@@ -164,19 +170,40 @@
     </section>
 
 
+    <!-- Register -->
+    <section id="register" class="register-section">
+
+        <div class="container">
+
+            <h2 class="register-section__header">Registration</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <form action="#" class="form">
+                        <input required placeholder="Company name" name="companyName" type="text" maxlength="30" class="form__input">
+                
+                        <input required placeholder="Contact person" name="contactPerson" type="text" maxlength="30" class="form__input">
+                
+                        <input required placeholder="example@mail.com" name="email" type="email" class="form__input form__input-email">
+                
+                        <input required placeholder="Phone" name="Phone" type="text" maxlength="20" class="form__input">
+                
+                        <button class="form__button">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="register-section__text">
+                        To become an exhibitor, please fill and submit your company information.
+                        We will contact you shortly to discuss your participation details.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
-    <!-- <form action="#" class="form">
-        <input required placeholder="Company name" name="companyName" type="text" maxlength="30" class="form__input">
-
-        <input required placeholder="Contact person" name="contactPerson" type="text" maxlength="30" class="form__input">
-
-        <input required placeholder="example@mail.com" name="email" type="email" class="registration-form__input form__input-email">
-
-        <input required placeholder="Phone" name="Phone" type="text" maxlength="20" class="form__input">
-
-        <button class="form__button">Submit</button>
-    </form> -->
-
 
     <script src="js/bundle/bundle.js"></script>
 </body>

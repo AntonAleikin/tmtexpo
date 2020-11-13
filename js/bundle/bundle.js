@@ -12,10 +12,142 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_send_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/send-form */ "./js/modules/send-form.js");
+/* harmony import */ var _modules_header_fixed__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header_fixed */ "./js/modules/header_fixed.js");
+/* harmony import */ var _modules_hamburger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/hamburger */ "./js/modules/hamburger.js");
+/* harmony import */ var _modules_hover__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/hover */ "./js/modules/hover.js");
+/* harmony import */ var _modules_send_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/send-form */ "./js/modules/send-form.js");
 // Импортируем модули и вызываем
 ;
-(0,_modules_send_form__WEBPACK_IMPORTED_MODULE_0__.default)();
+(0,_modules_header_fixed__WEBPACK_IMPORTED_MODULE_0__.default)();
+
+
+(0,_modules_hamburger__WEBPACK_IMPORTED_MODULE_1__.default)();
+
+
+(0,_modules_hover__WEBPACK_IMPORTED_MODULE_2__.default)();
+
+
+(0,_modules_send_form__WEBPACK_IMPORTED_MODULE_3__.default)();
+
+/***/ }),
+
+/***/ "./js/modules/hamburger.js":
+/*!*********************************!*\
+  !*** ./js/modules/hamburger.js ***!
+  \*********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ hamburger
+/* harmony export */ });
+function hamburger () 
+{
+    if (window.matchMedia('(max-width: 767px)').matches) {
+
+        const 
+        hamburger = document.querySelector('.hamburger'),
+        menu = document.querySelector('.menu'),
+        links = document.querySelectorAll('.menu__link');
+
+        // Открываем/закрываем меню, при клике на гамбургер
+        hamburger.addEventListener("click", (e) => {
+
+            if (!hamburger.classList.contains('hamburger_active') && !menu.classList.contains('menu_active')) {
+
+                hamburger.classList.add('hamburger_active');
+                menu.classList.add('menu_active');
+            } else {
+    
+                hamburger.classList.remove('hamburger_active');
+                menu.classList.remove('menu_active');
+            }
+        });
+
+
+        // После перехода по ссылке - сначала закрываем меню, а потом переходим по ссылке
+        links.forEach((link) => {
+
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                hamburger.classList.remove('hamburger_active');
+                menu.classList.remove('menu_active');
+
+                // Ждем время анимации и переходим по ссылке
+                setTimeout(() => {
+                    document.location = e.target.href;
+                }, 300);
+            });
+        }); 
+    } 
+}
+
+/***/ }),
+
+/***/ "./js/modules/header_fixed.js":
+/*!************************************!*\
+  !*** ./js/modules/header_fixed.js ***!
+  \************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ headerFixed
+/* harmony export */ });
+function headerFixed () {
+
+    const header = document.querySelector('.header');
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY >= window.innerHeight*0.91) {
+
+            header.classList.add('header_fixed');
+    
+        } else {
+    
+            header.classList.remove('header_fixed');
+        }
+    });
+}
+
+/***/ }),
+
+/***/ "./js/modules/hover.js":
+/*!*****************************!*\
+  !*** ./js/modules/hover.js ***!
+  \*****************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ hover
+/* harmony export */ });
+function hover () {
+
+    if (window.matchMedia('(max-width: 767px)').matches) {
+
+        const sectionLink = document.querySelector('.section-link__link');
+
+        if (sectionLink.classList.contains('section-link__link-hover')) {
+
+            sectionLink.classList.remove('section-link__link-hover');
+        }
+    }
+}
 
 /***/ }),
 

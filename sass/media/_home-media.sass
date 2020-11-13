@@ -1,0 +1,98 @@
+@media (max-width: 767px)
+    .home-section
+        padding-top: 100px 
+        &__header
+            font-size: 29px
+
+        &__promo
+            padding: 15px 5px 0 5px
+            &-text
+                font-size: 17px
+            &-dates
+                font-size: 20px
+        
+        &__sponsors
+            margin-top: 40px
+
+            &-logo
+                height: 9vh//60px
+    
+    .section-link
+        margin-right: 40px
+
+
+// Mobile
+@media (max-width: 575px) 
+    .home-section
+        padding-top: 18vh //120px
+        &__header
+            font-size: 4.5vh //30px
+        &__promo
+            height: 30vh //200px
+            padding: 1.5vh 0.7vh 0 0.7vh
+            &-text
+                font-size: 3.2vh //21px
+            &-dates
+                font-size: 3.5vh //24px
+
+
+        &__sponsors
+            margin-top: 9vh //60px
+
+            &-wrapper
+                display: block
+            
+            &-logos
+                width: 100%
+
+            &-text
+                font-size: 2.7vh //18px
+
+    .section-link
+        display: none
+
+    .section-link_mobile
+        margin-top: 3vh //20px
+        +flex-center
+        &__link
+            font-size: 6vh //40px
+            text-decoration: none
+            color: $main_bg
+            &:hover
+                text-decoration: none
+                color: $main_bg
+
+// Tall Mobile
+@media (max-width: 575px) and (min-height: 800px)
+
+    .home-section
+        padding-top: 16vh //200px 
+        &__header
+            font-size: 4vh 
+        &__promo
+            &-text
+                font-size: 2.6vh
+                line-height: 35px
+        &__sponsors
+            margin-top: 10vh //100px
+            &-text
+                font-size: 2.7vh //21px
+            &-wrapper
+                margin-top: 3vh
+
+// Short Mobile
+@media (max-width: 575px) and (max-height: 600px)
+
+    .home-section
+        padding-top: 16vh //200px 
+        &__header
+            font-size: 4vh 
+        &__promo
+            &-text
+                font-size: 3vh
+        &__sponsors
+            margin-top: 10vh //100px
+            &-text
+                font-size: 2.7vh //21px
+            &-wrapper
+                margin-top: 3vh

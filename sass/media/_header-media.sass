@@ -1,0 +1,49 @@
+@media (max-width: 767px)
+
+    .hamburger
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        span
+            background-color: $white_color
+            width: 100%
+            height: 0.4vh
+
+        &_active 
+            cursor: pointer
+            // Располагаем спены, которые скрестились, по-центру
+            display: flex
+            justify-content: center
+            align-items: center
+
+            span
+                position: absolute
+                &:nth-child(1)
+                    transform: rotate(-45deg)
+                &:nth-child(2)
+                    transform: translateX(150%)
+                    opacity: 0
+                &:nth-child(3)
+                    transform: rotate(45deg)
+
+    .menu
+        margin-top: 8.6vh
+        padding: 12px 32px
+        background-color: rgba(29, 194, 219, .9)
+
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+
+        transition: all 0.3s ease-out 
+
+        // Убираем со ст, чтобы потом выдвинуть JS-ом, при добавлении класса active
+        position: absolute
+        width: 100%
+        height: 91.4vh
+        top: 0
+        left: -100%
+        &_active // Добавляем класс JS-ом, который будет выдвигать меню 
+            left: 0
+
