@@ -1,6 +1,8 @@
 // Импортируем сервис
 import fetchservice from '../services/fetch-service';
 
+import overlay from './overlay';
+
 export default function sendForm() {
 
     const form = document.querySelector('.form');
@@ -16,6 +18,13 @@ export default function sendForm() {
         }); 
 
         fetchservice('php/send-mail.php', formDataObject)
-        .then(response => console.log(response));
+        .then(response => {
+            if (response === true) {
+                setTimeout(() => {
+                    form.reset();
+                }, 2000);
+                overlay();
+            }
+        });
     });
 }

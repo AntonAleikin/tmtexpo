@@ -59,14 +59,14 @@ function hamburger ()
 
             if (!hamburger.classList.contains('hamburger_active') && !menu.classList.contains('menu_active')) {
 
+                document.documentElement.style.overflow = 'hidden';
                 hamburger.classList.add('hamburger_active');
                 menu.classList.add('menu_active');
-                document.documentElement.style.overflow = 'hidden';
             } else {
     
+                document.documentElement.style.overflow = 'auto';
                 hamburger.classList.remove('hamburger_active');
                 menu.classList.remove('menu_active');
-                document.documentElement.style.overflow = 'auto';
             }
         });
 
@@ -155,6 +155,54 @@ function hover () {
 
 /***/ }),
 
+/***/ "./js/modules/overlay.js":
+/*!*******************************!*\
+  !*** ./js/modules/overlay.js ***!
+  \*******************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => /* binding */ overlay
+/* harmony export */ });
+function overlay () {
+
+    const registerSection = document.querySelector('.register-section');
+
+    const modal = document.createElement('div');
+    modal.classList.add('overlay');
+    modal.innerHTML = `
+
+        <div class="overlay-content">
+
+            <div class="overlay-header">Thank you for your interest!</div>
+
+            <div class="overlay-text">
+                Our manager will contact you within 24 hours. 
+                Please check your email, including the spam box.
+            </div>
+
+            <button class="overlay-button">OK</button>
+        </div>
+    `;
+    document.documentElement.style.overflow = 'hidden';
+    registerSection.append(modal);
+
+    const closeButton = document.querySelector('.overlay-button');
+    closeButton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.documentElement.style.overflow = 'auto';
+        modal.remove();
+    });
+}
+
+/***/ }),
+
 /***/ "./js/modules/send-form.js":
 /*!*********************************!*\
   !*** ./js/modules/send-form.js ***!
@@ -170,8 +218,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => /* binding */ sendForm
 /* harmony export */ });
 /* harmony import */ var _services_fetch_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/fetch-service */ "./js/services/fetch-service.js");
+/* harmony import */ var _overlay__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./overlay */ "./js/modules/overlay.js");
 // Импортируем сервис
 ;
+
+
 
 function sendForm() {
 
@@ -188,7 +239,14 @@ function sendForm() {
         }); 
 
         (0,_services_fetch_service__WEBPACK_IMPORTED_MODULE_0__.default)('php/send-mail.php', formDataObject)
-        .then(response => console.log(response));
+        .then(response => {
+            if (response === true) {
+                setTimeout(() => {
+                    form.reset();
+                }, 2000);
+                (0,_overlay__WEBPACK_IMPORTED_MODULE_1__.default)();
+            }
+        });
     });
 }
 
