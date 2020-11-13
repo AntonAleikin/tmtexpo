@@ -61,10 +61,12 @@ function hamburger ()
 
                 hamburger.classList.add('hamburger_active');
                 menu.classList.add('menu_active');
+                document.documentElement.style.overflow = 'hidden';
             } else {
     
                 hamburger.classList.remove('hamburger_active');
                 menu.classList.remove('menu_active');
+                document.documentElement.style.overflow = 'auto';
             }
         });
 
@@ -74,6 +76,8 @@ function hamburger ()
 
             link.addEventListener("click", (e) => {
                 e.preventDefault();
+
+                document.documentElement.style.overflow = 'auto';
 
                 hamburger.classList.remove('hamburger_active');
                 menu.classList.remove('menu_active');

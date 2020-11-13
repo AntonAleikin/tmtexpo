@@ -12,10 +12,12 @@ export default function hamburger ()
 
             if (!hamburger.classList.contains('hamburger_active') && !menu.classList.contains('menu_active')) {
 
+                document.documentElement.style.overflow = 'hidden';
                 hamburger.classList.add('hamburger_active');
                 menu.classList.add('menu_active');
             } else {
     
+                document.documentElement.style.overflow = 'auto';
                 hamburger.classList.remove('hamburger_active');
                 menu.classList.remove('menu_active');
             }
@@ -27,6 +29,8 @@ export default function hamburger ()
 
             link.addEventListener("click", (e) => {
                 e.preventDefault();
+
+                document.documentElement.style.overflow = 'auto';
 
                 hamburger.classList.remove('hamburger_active');
                 menu.classList.remove('menu_active');
