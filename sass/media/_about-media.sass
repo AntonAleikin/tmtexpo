@@ -1,26 +1,80 @@
-@media (max-width: 991px)
+//Large screen
+@media (max-width: 1199px)
     .about-section
         height: auto
-
-        .section-link
-            display: none
 
         &__descr
             &-item
-                margin-bottom: 4vh
-            &-text
-                font-size: 3vh
-            &-list
-                font-size: 2.5vh
+                padding: 15px 
 
+            &-text
+                font-size: 16px 
+                line-height: 23px 
+                text-align: left
+    
+// Medium screen
+@media (max-width: 991px)
+    .about-section
+
+        &__descr
+            &-item
+                padding: 10px 
+
+            &-text
+                font-size: 14px //2.4vh
+                line-height: 21px 
+            
+            &-header
+            margin-bottom: 15px
+            
+            &-list
+                font-size: 12px
+
+// Small screen
 @media (max-width: 767px)
     .about-section
-        height: auto
 
         &__text
+            text-align: left
             span
                 font-size: 3.5vh
 
         &__descr
+            &-item
+                margin-bottom: 20px
+                padding: 15px 
+                height: 250px 
+            &-text
+                font-size: 17px
+                line-height: 21px //4.2vh
+
+            &-header
+                margin-bottom: 20px
             &-list
-                font-size: 2.7vh
+                font-size: 17px
+    
+    .section-link_about
+        display: none
+
+
+//Mobile
+@media (max-width: 575px) 
+    .about-section
+        &__descr
+            &-item
+                padding: 20px 12px 12px 12px
+                height: 250px
+            &-text
+                font-size: 15px
+                line-height: 20px
+
+            &-header
+                margin: 15px 0 10px 0
+                font-size: 15px
+
+            &-list
+                font-size: 13px
+
+            &-icon
+                bottom: 5px
+                font-size: 30px

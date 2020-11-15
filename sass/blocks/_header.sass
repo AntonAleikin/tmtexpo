@@ -1,5 +1,5 @@
 .header
-    height: 8.6vh
+    height: 70px //8.6vh
     width: 100%
     position: absolute
     top: 0
@@ -19,28 +19,42 @@
 
 
 .nav
-    padding: 3px 0 0 0 
-    height: 8.6vh
+    padding-top: 3px
+    height: 70px //8.6vh
     +flex-between-center
 
     &__logo
-        height: 7.3vh
+        height: 55px //7.3vh
         
         &-round
             +flex-center
-            height: 7.3vh
+            height: 60px //7.3vh
+            width: 60px
             border-radius: 100%
             background-color: $white_color
 
         &-link
+            +flex-center
+
             &:hover
                 text-decoration: none
+        
+        &-text
+            font-family: PT Serif, serif
+            margin-left: 10px
+            font-size: 20px
+            font-weight: 500
+            color: $main
+            span
+                font-family: PT Serif, serif
+                color: #004080
+
 
 
 .menu
     margin: 0
     padding: 0
-    height: 4.5vh
+    //height: 4.5vh
     width: 39% //проценты не от всей ширины экрана, а от ширины сетки
 
     +flex-between-center
@@ -50,7 +64,7 @@
     &__link
         font-family: Montserrat, sans-serif
         color: $white_color
-        font-size: 2.15vh
+        font-size: 16px //2.15vh
         line-height: 4.5vh
         &:hover
             color: $white_color
@@ -70,7 +84,7 @@
 // Гамбургер
 .hamburger
     width: 30px
-    height: 3vh
+    height: 22px
     
     position: absolute
     top: 50%

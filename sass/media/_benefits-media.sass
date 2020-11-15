@@ -1,40 +1,138 @@
+// Large screen
+@media (max-width: 1199px)
+    .benefits-section 
+        height: auto
+
+        &__header-text
+            font-size: 18px 
+            font-weight: 400
+            line-height: 28px 
+            span
+                font-weight: 600
+
+            //Emin's quote
+            &_name
+                +flex-between-center
+                span
+                    font-size: 18px 
+                    font-weight: 500 
+
+        //Emin's quote
+        &__icon
+            height: 100px 
+        &__quote
+            margin-top: 10px
+            font-size: 15px 
+            font-weight: 400
+            line-height: 27px 
+
+        &__footer-text
+            font-size: 18px 
+
+        &__list
+            &-item
+                font-size: 13px 
+
+
+// Medium screen
 @media (max-width: 991px)
     .benefits-section
 
         &__wrapper
-            height: 55vh
+            height: 370px
 
-        .section-link
-            display: none
+        &__header-text
+            font-size: 17px 
+            font-weight: 400
+            line-height: 28px 
+            span
+                font-weight: 600
 
+            //Emin's quote
+            &_name
+                +flex-between-center
+                span
+                    font-size: 17px 
+                    font-weight: 500
+
+        //Emin's quote
+        &__icon
+            height: 80px 
+        &__quote
+            margin-top: 10px
+            font-size: 13.5px 
+            font-weight: 400
+            line-height: 24px 
+
+        &__footer-text
+            font-size: 17px 
+
+
+
+// Small screen
 @media (max-width: 767px)
     .benefits-section
-        height: auto
 
         &__header
-            margin-bottom: 4vh
+            margin-bottom: 35px
 
         &__wrapper
             margin-bottom: 5vh
-            height: 60vh
+            padding: 15px 
+            height: 300px
 
-        .section-link
+        //Emin's quote
+        &__quote
+            font-size: 14px 
+            font-weight: 400
+            line-height: 25px
+
+        &__list
+            &-item
+                font-size: 14px 
+
+
+        .section-link_benefits
             display: none
   
 
-// Tall Mobile
-@media (max-width: 575px) and (min-height: 800px)
+// Mobile
+@media (max-width: 575px)
     .benefits-section
-        &__wrapper
-            height: 72vh
 
-            &-header
+        &__wrapper
+            margin-bottom: 5vh
+            padding: 15px 
+            height: 370px
+
+        &__header-text
+            font-size: 15px 
+            font-weight: 400
+            line-height: 28px 
+            span
+                font-weight: 600
+
+            //Emin's quote
+            &_name
+                +flex-between-center
                 span
-                    font-size: 2.5vh
+                    font-size: 15px 
+                    font-weight: 500
 
+        //Emin's quote
+        &__icon
+            height: 70px 
+        &__quote
+            margin-top: 10px
+            font-size: 13px 
+            font-weight: 400
+            line-height: 24px 
+            text-align: left
 
-// Short Mobile
-@media (max-width: 575px) and (max-height: 600px)
-    .benefits-section
-        &__wrapper
-            height: 65vh
+        &__footer-text
+            font-size: 15px 
+        
+        &__list
+            margin: 10px 0
+            &-item
+                font-size: 12px 

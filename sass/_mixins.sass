@@ -11,8 +11,8 @@
 
 // Главные стили каждой секции
 =section
-    padding-top: 13vh 
-    height: 100vh
+    padding: 13vh 0 5vh 0 
+    min-height: 100vh
     width: 100%
     position: relative
 
@@ -28,20 +28,24 @@
 
 // Кнопка со стрелкой на следующую секцию
 =link-to-other-section
-    &__link
-        font-size: 3vh
-            
-        display: inline-block
-        text-decoration: none
+    +flex-center
+    .section-link
+        &__link
+            display: inline-block
+            text-decoration: none
+            color: $black_color
+            font-size: 3vh
 
-        &-hover
-            &:hover
-                transition: all 0.2s ease-out
-                text-decoration: none
-                transform: translateY(-2px)
-                text-shadow: 0px 2px 2px grey
+            &-hover
+                &:hover
+                    transition: all 0.2s ease-out
+                    text-decoration: none
+                    transform: translateY(-2px)
+                    text-shadow: 0px 2px 2px grey
+                    color: $black_color
 
-    &__text
-        display: inline-block
+        &__text
+            display: inline-block
+            font-family: Montserrat, sans-serif
     .pointer
         transform: translateY(0.3vh) //Выравниваем стрелочку (опускаем вниз) 
